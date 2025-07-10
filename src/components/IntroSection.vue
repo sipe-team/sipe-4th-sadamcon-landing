@@ -74,9 +74,7 @@ onMounted(() => {
         </h2>
         <div ref="contentRef" class="intro-text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            네 번째 사담콘은 SIPE의 개발자 컨퍼런스로, 개발자들이 모여 서로의 경험과 지식을 나누는 자리입니다. 이번 사담콘에서는 다양한 주제의 발표 세션과 네트워킹 이벤트가 준비되어 있습니다.
           </p>
           <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 

@@ -16,32 +16,53 @@ interface Card {
 const cards: Card[] = [
   {
     id: 1,
-    title: "Innovation",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    title: "Redis Lettuce 기반 분산 락으로 데이터 정합성 보장하기",
+    content: "Redis Lettuce 기반 분산 락을 통해 주문·결제 등에서 발생할 수 있는 중복 처리 문제를 해결하고, 동시성 환경에서도 데이터 정합성을 보장하는 구조와 실제 적용 사례를 소개합니다. 또한 락 해제의 한계와 향후 개선 방향까지 함께 다룹니다.",
+    image: "https://picsum.photos/400/300",
     color: "#667eea"
   },
   {
     id: 2,
-    title: "Technology",
-    content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "https://images.unsplash.com/photo-1518709594023-6eab9baa7959?w=400&h=300&fit=crop",
+    title: "현업에서의 LLMOps",
+    content: "현업에서의 경험을 바탕으로 LLMOps 워크플로우 전반—데이터 준비, 모델 운영, 모니터링 등—에서 실제로 어떤 작업이 이루어지는지 설명합니다. 또한 다양한 LLMOps 도구들을 소개하며 실무에 적용할 수 있는 방안들을 함께 제시합니다.",
+    image: "https://picsum.photos/400/300",
     color: "#764ba2"
   },
   {
     id: 3,
-    title: "Design",
-    content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "https://images.unsplash.com/photo-1518709286873-494fb702f4e4?w=400&h=300&fit=crop",
+    title: "지구 반대편을 대응하는 어플리케이션을 위해",
+    content: "글로벌 서비스를 운영하며 겪은 다국어, 현지 정책, UI 분기 등의 어려움을 주니어 개발자의 시각으로 풀어낸 경험을 공유합니다. 지구 반대편 사용자도 자연스럽게 사용할 수 있는 서비스를 만들기 위해 고민한 실질적인 방법들을 소개합니다.",
+    image: "https://ca.slack-edge.com/T053C7SL8GL-U08P06Q702X-1287f6bb6f7d-512",
     color: "#f093fb"
   },
   {
     id: 4,
-    title: "Development",
-    content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+    title: "알잘딱 에이전트 만들기: Context Engineering",
+    content: "행위 중심의 에이전트를 효과적으로 만들기 위해선 LLM의 한계를 극복할 수 있는 정교한 Context Engineering이 핵심이며, 이를 위해 LangChain/LangGraph 같은 도구들이 활용됩니다. 또한 에이전트의 품질을 평가할 수 있는 지표 없이 실서비스에 안정적으로 적용하기 어렵다는 점도 강조합니다.",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQE92humOXxvaQ/profile-displayphoto-shrink_800_800/B56ZW.KqRIGUAg-/0/1742652223402?e=1757548800&v=beta&t=UII61jRmTGddJ1pzsHexDVi1tfb2DEe2hQ5tjHb5OW4",
     color: "#f5576c"
-  }
+  },
+  {
+    id: 5,
+    title: "디자이너 출신 개발자의 PM 도전기",
+    content: "디자인 전공 후 프론트엔드 개발자로 일하다가 PM 인턴으로 커리어를 확장하게 된 개인적인 여정과 동기를 공유합니다. 개발자에서 PM으로 전환하기까지의 준비 과정과 실제 경험을 솔직하게 들려드립니다.",
+    image: "https://lh3.google.com/u/0/d/1GtwKsWAM5BoIm1DmoVh9ckrGhGT64Sm5=k",
+    color: "#e5e6b4"
+  },
+  {
+    id: 6,
+    title: "개발 유튜버 할래말래 애매하긴해",
+    content: "개발 유튜브 채널을 운영하며 겪은 수익, 콘텐츠 성과, 성장 전략 등을 공유하고, 잘되는 채널과 그렇지 않은 채널의 차이를 분석합니다. 유튜버를 꿈꾸는 분들을 위해 현실적인 조언과 방향성도 함께 전합니다.",
+    image: "https://picsum.photos/400/300",
+    color: "#d4fc79"
+  },
+  {
+    id: 7,
+    title: "풀스택 프리랜서가 AI시대에 프로젝트를 구성하는 방식",
+    content: "AI 시대에 풀스택 프리랜서로서 어떻게 도구들을 조합해 프로젝트를 효율적으로 구성해왔는지에 대한 실질적인 경험과 시행착오를 공유합니다. ChatGPT, Cursor, Tailwind, Shadcn, Monorepo 등 각 도구의 도입 배경과 문제 해결 과정을 통해, 개발자의 역할이 어떻게 변화하고 있는지를 짚어봅니다.",
+    image: "https://picsum.photos/400/300",
+    color: "#fbc2eb"
+  },
 ]
 
 onMounted(() => {
@@ -237,7 +258,7 @@ const handleCardClick = (index: number) => {
 
 .card-image {
   position: relative;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
 }
 
