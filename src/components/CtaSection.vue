@@ -95,7 +95,14 @@ onMounted(() => {
               <div class="highlight-icon">📅</div>
               <div class="highlight-text">
                 <h4>일정</h4>
-                <p>2025년 8월 2일 13:00 - 17:30</p>
+                <p>2025년 8월 2일 토요일 13:00 - 17:30</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">📍</div>
+              <div class="highlight-text">
+                <h4>장소</h4>
+                <p>서울 마포구 마포대로 122, 프론트원 5층 박병원홀</p>
               </div>
             </div>
             <div class="highlight-item">
@@ -113,7 +120,7 @@ onMounted(() => {
               <span class="button-icon">→</span>
             </button>
             <p class="cta-note">
-              * 선착순 마감
+              * 티켓은 선착순으로 마감될 수 있습니다.
             </p>
           </div>
         </div>

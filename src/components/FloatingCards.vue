@@ -604,7 +604,7 @@ onMounted(() => {
   transform: perspective(1000px) rotateY(-90deg) scale(0.8);
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .floating-cards {
     padding: 1.5rem;
   }

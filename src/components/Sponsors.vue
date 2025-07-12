@@ -22,6 +22,21 @@ const sponsors: Sponsor[] = [
     name: "이벤터스",
     logo: "/img/sponsor_eventus.png",
   },
+  {
+    id: 3,
+    name: "CLOOP",
+    logo: "/img/sponsor_cloop.png",
+  },
+  {
+    id: 4,
+    name: "한빛미디어",
+    logo: "/img/sponsor_hanbit.png",
+  },
+  {
+    id: 5,
+    name: "제이펍",
+    logo: "/img/sponsor_jpub.png",
+  },
 ]
 
 onMounted(() => {
@@ -263,7 +278,7 @@ onMounted(() => {
   }
   
   .sponsors-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
   }
   
@@ -290,6 +305,13 @@ onMounted(() => {
   
   .sponsor-description {
     font-size: 0.95rem;
+  }
+}
+
+/* Mobile only - single column layout */
+@media (max-width: 767px) {
+  .sponsors-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
