@@ -21,7 +21,7 @@ const handleRegister = () => {
     // Default UTM parameters if not present
     url.searchParams.set('utm_source', 'landing')
     url.searchParams.set('utm_medium', 'web')
-    url.searchParams.set('utm_campaign', 'cta_bottom')
+    url.searchParams.set('utm_campaign', 'mlt0tcndtl')
   }
 
   window.open(url.toString(), '_blank')
