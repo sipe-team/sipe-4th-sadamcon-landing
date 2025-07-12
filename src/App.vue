@@ -94,4 +94,26 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #764ba2;
 }
+
+/* Responsive design */
+@media (max-width: 1279px) {
+  .section {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+  .cards-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Custom scrollbar for mobile */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
 </style>

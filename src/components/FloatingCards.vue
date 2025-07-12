@@ -331,26 +331,57 @@ onMounted(() => {
   opacity: 0.1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
+  .floating-cards {
+    padding: 1.5rem;
+  }
+  
   .cards-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
+  .cards-header {
+    margin-bottom: 3rem;
+  }
+  
   .cards-header h2 {
     font-size: 2.5rem;
+    margin-bottom: 0.875rem;
   }
   
   .cards-header p {
     font-size: 1rem;
+    max-width: 500px;
+  }
+  
+  .floating-card {
+    border-radius: 16px;
   }
   
   .card-content {
     padding: 1.5rem;
   }
   
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.875rem;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+  
   .card-image {
-    height: 150px;
+    height: 300px;
+  }
+  
+  .card-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.95rem;
+    border-radius: 40px;
   }
 }
 </style>

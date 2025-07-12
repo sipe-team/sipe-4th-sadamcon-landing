@@ -366,10 +366,11 @@ onMounted(() => {
   50% { transform: rotate(55deg) translateY(-25px); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .container {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 1.5rem;
   }
   
   .intro-content {
@@ -379,9 +380,28 @@ onMounted(() => {
   
   .intro-title {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   
   .intro-text {
+    font-size: 1rem;
+  }
+  
+  .sipe-info-card {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .sipe-info-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .sipe-info-card p {
+    font-size: 0.95rem;
+  }
+  
+  .cta-button {
+    padding: 0.875rem 1.75rem;
     font-size: 1rem;
   }
   
@@ -390,7 +410,22 @@ onMounted(() => {
   }
   
   .floating-shape {
-    opacity: 0.05;
+    opacity: 0.08;
+  }
+  
+  .shape-1 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .shape-2 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .shape-3 {
+    width: 70px;
+    height: 70px;
   }
 }
 </style>
