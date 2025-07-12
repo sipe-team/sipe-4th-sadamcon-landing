@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { gsap } from 'gsap'
 
 const cardsRef = ref<HTMLElement>()
 const cardElements = ref<HTMLElement[]>([])
@@ -70,23 +69,15 @@ onMounted(() => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Animate cards with stagger - optimized for performance
+          // Add animation class for CSS-based animations
           if (cardElements.value.length > 0) {
-            gsap.fromTo(cardElements.value,
-              { 
-                opacity: 0, 
-                y: 50,
-                scale: 0.9
-              },
-              { 
-                opacity: 1, 
-                y: 0,
-                scale: 1,
-                duration: 0.8,
-                ease: "power2.out",
-                stagger: 0.1,
+            cardElements.value.forEach((card, index) => {
+              if (card) {
+                setTimeout(() => {
+                  card.classList.add('animate-in')
+                }, index * 100)
               }
-            )
+            })
           }
           
           observer.unobserve(entry.target)
@@ -105,39 +96,6 @@ onMounted(() => {
     console.error('CardsRef not found')
   }
 })
-
-const handleCardHover = (index: number, isHover: boolean) => {
-  const card = cardElements.value[index]
-  if (card) {
-    gsap.to(card, {
-      scale: isHover ? 1.02 : 1,
-      y: isHover ? -5 : 0,
-      duration: 0.2,
-      ease: "power1.out",
-      overwrite: true
-    })
-  }
-}
-
-const handleCardClick = (index: number) => {
-  const card = cardElements.value[index]
-  if (card) {
-    gsap.to(card, {
-      scale: 0.98,
-      duration: 0.1,
-      ease: "power1.out",
-      overwrite: true,
-      onComplete: () => {
-        gsap.to(card, {
-          scale: 1.02,
-          duration: 0.15,
-          ease: "power1.out",
-          overwrite: true
-        })
-      }
-    })
-  }
-}
 </script>
 
 <template>
@@ -154,9 +112,6 @@ const handleCardClick = (index: number) => {
         :ref="el => cardElements[index] = el as HTMLElement"
         class="floating-card"
         :style="{ '--card-color': card.color }"
-        @mouseenter="handleCardHover(index, true)"
-        @mouseleave="handleCardHover(index, false)"
-        @click="handleCardClick(index)"
       >
         <div class="card-image">
           <img :src="card.image" :alt="card.title" loading="lazy" />
@@ -228,20 +183,39 @@ const handleCardClick = (index: number) => {
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform-style: preserve-3d;
   will-change: transform;
-  /* Ensure cards are visible initially */
-  opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateZ(0); /* Force GPU acceleration */
+  
+  /* Initial state for entrance animation */
+  opacity: 0;
+  transform: translate3d(0, 50px, 0) scale3d(0.9, 0.9, 1);
 }
 
+/* Entrance animation */
+.floating-card.animate-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+/* Hover animations - only transform and properties that don't cause reflow */
 .floating-card:hover {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translate3d(0, -8px, 0) scale3d(1.02, 1.02, 1);
+}
+
+/* Active/click animation */
+.floating-card:active {
+  transform: translate3d(0, -4px, 0) scale3d(0.98, 0.98, 1);
+  transition: transform 0.1s ease;
 }
 
 .card-image {
@@ -254,12 +228,13 @@ const handleCardClick = (index: number) => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .floating-card:hover .card-image img {
-  transform: scale(1.1);
+  transform: translate3d(0, 0, 0) scale3d(1.05, 1.05, 1);
 }
 
 .card-overlay {
@@ -270,7 +245,7 @@ const handleCardClick = (index: number) => {
   bottom: 0;
   background: linear-gradient(135deg, var(--card-color, #667eea), transparent);
   opacity: 0.3;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .floating-card:hover .card-overlay {
@@ -304,27 +279,37 @@ const handleCardClick = (index: number) => {
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   will-change: transform;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .card-button:hover {
   background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translate3d(0, -2px, 0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.card-button:active {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.1s ease;
+}
+
 .arrow {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .card-button:hover .arrow {
-  transform: translateX(5px);
+  transform: translate3d(5px, 0, 0);
 }
 
 .card-glow {
@@ -335,9 +320,11 @@ const handleCardClick = (index: number) => {
   height: 200%;
   background: radial-gradient(circle, var(--card-color, #667eea) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   pointer-events: none;
   z-index: -1;
+  will-change: opacity;
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .floating-card:hover .card-glow {
