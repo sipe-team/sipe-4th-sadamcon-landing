@@ -19,6 +19,16 @@ interface Card {
 
 const cards: Card[] = [
   {
+    id: 0,
+    title: "KEYNOTE",
+    content: "SIPE 소개 및 행사 안내",
+    speakerName: "심미진",
+    speakerIntro: `안녕하세요, 프론트엔드 주니어 개발자 심미진입니다. IT 커뮤니티 활동하는 것을 좋아하고, 경험하고 얻은 것들을 다함께 공유함으로써 IT 생태계에 조금이라도 기여하고자 합니다.`,
+    image: "/img/profile_mijin.png",
+    color: "#667eea",
+    linkedinUrl: 'https://www.linkedin.com/in/jun-hwan-jang-aa7567209/',
+  },
+  {
     id: 1,
     title: "Redis Lettuce 기반 분산 락으로 데이터 정합성 보장하기",
     content: "Redis Lettuce 기반 분산 락을 통해 주문·결제 등에서 발생할 수 있는 중복 처리 문제를 해결하고, 동시성 환경에서도 데이터 정합성을 보장하는 구조와 실제 적용 사례를 소개합니다. 또한 락 해제의 한계와 향후 개선 방향까지 함께 다룹니다.",
@@ -38,7 +48,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
     content: "현업에서의 경험을 바탕으로 LLMOps 워크플로우 전반—데이터 준비, 모델 운영, 모니터링 등—에서 실제로 어떤 작업이 이루어지는지 설명합니다. 또한 다양한 LLMOps 도구들을 소개하며 실무에 적용할 수 있는 방안들을 함께 제시합니다.",
     speakerName: "김민준",
     speakerIntro: `한국 대기업 문화를 가진 IT 기업부터, 실리콘밸리 문화의 금융 에이전트 스타트업까지 다양한 경험을 쌓은 소프트웨어 엔지니어 김민준입니다.`,
-    image: "https://hips.hearstapps.com/hmg-prod/images/elon-musk-gettyimages-2147789844-web-675b2c17301ea.jpg",
+    image: "/img/profile_minjun.jpg",
     color: "#764ba2",
     linkedinUrl: 'https://www.linkedin.com/in/neilkim404/',
   },
@@ -49,7 +59,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
     speakerName: "김민규",
     speakerIntro: `자동차도 없고, 면허도 없지만, 전기차 도메인에서 일하고 있는 프론트엔드 개발자 김민규입니다.
 프론트엔드 이외에도 홈서버나 인프라, 3D 프린트, 그리고 맥주에도 관심이 많아요.`,
-    image: "https://ca.slack-edge.com/T053C7SL8GL-U08P06Q702X-1287f6bb6f7d-512",
+    image: "/img/profile_minkyu.webp",
     color: "#f093fb"
   },
   {
@@ -60,7 +70,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
     speakerIntro: `안녕하세요. AI Research Engineer 조혜정입니다.
 버티컬 도메인 에이전트를 연구/개발하며, 컨텍스트 엔지니어링을 통해 성능을 고도화하는 작업을 담당해 왔습니다.
 이번 사담콘 에서는 그 과정에서 얻은 인사이트와 실무 노하우를 공유하고자 합니다 :)`,
-    image: "https://media.licdn.com/dms/image/v2/D5603AQE92humOXxvaQ/profile-displayphoto-shrink_800_800/B56ZW.KqRIGUAg-/0/1742652223402?e=1757548800&v=beta&t=UII61jRmTGddJ1pzsHexDVi1tfb2DEe2hQ5tjHb5OW4",
+    image: "/img/profile_hyejeong.jpeg",
     color: "#f5576c",
     linkedinUrl: 'https://www.linkedin.com/in/hyejeong-jo-1069b2235/'
   },
@@ -72,7 +82,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
     speakerIntro: `안녕하세요, 이지원입니다.
 디자인 → 개발 → PM이라는 커리어 전환을 경험하며 다양한 시각에서 제품을 바라보고 있습니다.
 이번 발표를 통해 PM을 꿈꾸거나 직무 전환을 고민하는 분들께 현실적인 인사이트와 작은 용기를 전할 수 있기를 바랍니다.`,
-    image: "https://lh3.google.com/u/0/d/1GtwKsWAM5BoIm1DmoVh9ckrGhGT64Sm5=k",
+    image: "/img/profile_jiwon.jpeg",
     color: "#e5e6b4"
   },
   {
@@ -81,7 +91,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
     content: "개발 유튜브 채널을 운영하며 겪은 수익, 콘텐츠 성과, 성장 전략 등을 공유하고, 잘되는 채널과 그렇지 않은 채널의 차이를 분석합니다. 유튜버를 꿈꾸는 분들을 위해 현실적인 조언과 방향성도 함께 전합니다.",
     speakerName: "김찬희",
     speakerIntro: `안녕하세요, 5년차 프론트엔드 개발자 김찬희입니다. 현재 주니어 프론트엔드 개발자를 대상으로 프론트맨이라는 채널을 운영하고 있으며, N잡과 오픈소스 프로젝트에 관심이 많습니다.`,
-    image: "https://pimg.mk.co.kr/news/cms/202502/04/news-p.v1.20250204.c58974823543481ba7070079cffe568b_R.jpg",
+    image: "/img/profile_chanhee.jpg",
     color: "#d4fc79"
   },
   {
@@ -91,7 +101,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
     speakerName: "최승일",
     speakerIntro: `중소 게임회사, 커머스 스타트업, 핀테크 스타트업을 거쳐 홀로서기에 도전중인 풀스택 개발자 최승일입니다.
 생존을 위해 생산성에 관심이 많고, 생산성 관점에서 AI 제품군을 어떻게 대하고 있는지 이야기하고자 합니다.`,
-    image: "https://i.namu.wiki/i/C9DriGKF1EAL2ScL7E7ojp9ReOUt0PVWrhTdUQgIr2lYcxSIa9qR8ydH0lVysRvTKNTLnqA9jZ5MiLBYnVxuRw.webp",
+    image: "/img/profile_seungil.png",
     color: "#fbc2eb"
   },
 ]
