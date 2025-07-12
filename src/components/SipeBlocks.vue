@@ -6,31 +6,7 @@ const titleRef = ref<HTMLElement>()
 const subtitleRef = ref<HTMLElement>()
 
 onMounted(() => {
-  console.log('SipeBlocks mounted')
-  
-  // Wait a bit for DOM to be ready
   setTimeout(() => {
-    console.log('Starting GSAP animations for title')
-    
-    // Initial animation for title
-    if (titleRef.value) {
-      gsap.fromTo(titleRef.value, 
-        { 
-          scale: 0.5, 
-          opacity: 0,
-          y: -50
-        },
-        { 
-          scale: 1, 
-          opacity: 1,
-          y: 0,
-          duration: 2,
-          ease: "elastic.out(1, 0.3)",
-          onComplete: () => console.log('Title animation complete')
-        }
-      )
-    }
-
     // Subtitle animation with delay
     if (subtitleRef.value) {
       gsap.fromTo(subtitleRef.value,
@@ -47,33 +23,21 @@ onMounted(() => {
         }
       )
     }
-
-    // Continuous floating animation for title
-    if (titleRef.value) {
-      gsap.to(titleRef.value, {
-        y: "random(-10, 10)",
-        rotation: "random(-1, 1)",
-        duration: "random(4, 6)",
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-      })
-    }
   }, 100)
 })
 </script>
 
 <template>
-  <div class="sipe-hero">
+  <div ref="heroRef" class="sipe-hero">
     <div class="hero-content">
       <h1 ref="titleRef" class="hero-title">
-        <span class="title-line title-sipe">SIPE</span>
-        <span class="title-line title-4th">4th</span>
-        <span class="title-line title-conference">CONFERENCE</span>
+        <span>SIPE</span>
+        <span>4TH</span>
+        <span>CONFERENCE</span>
       </h1>
-      <p ref="subtitleRef" class="hero-subtitle">
+      <h2 ref="subtitleRef" class="hero-subtitle">
         네 번째 사담콘
-      </p>
+      </h2>
     </div>
     <div class="floating-elements">
       <div class="float-circle float-1"></div>
@@ -111,7 +75,6 @@ onMounted(() => {
 }
 
 .hero-content {
-  text-align: center;
   z-index: 10;
   max-width: 1280px;
   padding: 2rem;
@@ -119,7 +82,7 @@ onMounted(() => {
 
 .hero-title {
   font-weight: 900;
-  letter-spacing: 0.1em;
+  font-size: clamp(4rem, 10vw, 9rem);
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #ff9595, #ffe5b1);
   -webkit-background-clip: text;
@@ -129,39 +92,13 @@ onMounted(() => {
   line-height: 1.1;
   font-family: 'Inter', sans-serif;
   opacity: 1;
-  transform: translateY(0) skewX(-8deg);
-  font-style: italic;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.1em;
 }
 
-.title-line {
-  display: block;
-  white-space: nowrap;
-  text-align: center;
-  width: 100%;
-}
-
-/* Adjust font sizes to make lines appear equal width */
-.title-sipe {
-  font-size: clamp(3rem, 8vw, 7rem);
-  letter-spacing: 0.3em;
-}
-
-.title-4th {
-  font-size: clamp(4rem, 10vw, 9rem);
-  letter-spacing: 0.4em;
-}
-
-.title-conference {
-  font-size: clamp(2.2rem, 6vw, 5.5rem);
-  letter-spacing: 0.15em;
-}
-
 .hero-subtitle {
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: 0.05em;
@@ -271,22 +208,7 @@ onMounted(() => {
   .hero-title {
     transform: translateY(0) skewX(-6deg);
   }
-  
-  .title-sipe {
-    font-size: clamp(2rem, 6vw, 4rem);
-    letter-spacing: 0.2em;
-  }
 
-  .title-4th {
-    font-size: clamp(2.5rem, 7vw, 5rem);
-    letter-spacing: 0.3em;
-  }
-
-  .title-conference {
-    font-size: clamp(1.5rem, 4.5vw, 3rem);
-    letter-spacing: 0.1em;
-  }
-  
   .hero-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
   }
@@ -319,21 +241,6 @@ onMounted(() => {
   .hero-title {
     transform: translateY(0) skewX(-4deg);
     gap: 0.05em;
-  }
-  
-  .title-sipe {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    letter-spacing: 0.15em;
-  }
-
-  .title-4th {
-    font-size: clamp(2rem, 6vw, 3.2rem);
-    letter-spacing: 0.25em;
-  }
-
-  .title-conference {
-    font-size: clamp(1.2rem, 3.5vw, 2rem);
-    letter-spacing: 0.08em;
   }
   
   .hero-subtitle {
