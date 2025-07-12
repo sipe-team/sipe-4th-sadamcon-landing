@@ -6,6 +6,27 @@ const introRef = ref<HTMLElement>()
 const titleRef = ref<HTMLElement>()
 const contentRef = ref<HTMLElement>()
 
+const handleRegister = () => {
+  const url = new URL('https://event-us.kr/sipe/event/104609')
+  
+  // Get UTM parameters from the URL
+  const utmSource = new URLSearchParams(window.location.search).get('utm_source')
+  const utmMedium = new URLSearchParams(window.location.search).get('utm_medium')
+  const utmCampaign = new URLSearchParams(window.location.search).get('utm_campaign')
+  if (utmSource && utmMedium && utmCampaign) {
+    url.searchParams.set('utm_source', utmSource)
+    url.searchParams.set('utm_medium', utmMedium)
+    url.searchParams.set('utm_campaign', utmCampaign)
+  } else {
+    // Default UTM parameters if not present
+    url.searchParams.set('utm_source', 'landing')
+    url.searchParams.set('utm_medium', 'web')
+    url.searchParams.set('utm_campaign', 'mlt0tcndtl')
+  }
+
+  window.open(url.toString(), '_blank')
+}
+
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -78,7 +99,7 @@ onMounted(() => {
             architecto beatae vitae dicta sunt explicabo.
           </p>
           <div class="cta-section">
-            <button class="cta-button">
+            <button class="cta-button" @click="handleRegister">
               지금 신청하기
             </button>
           </div>
