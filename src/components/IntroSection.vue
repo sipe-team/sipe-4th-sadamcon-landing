@@ -86,18 +86,26 @@ onMounted(() => {
         </h2>
         <div ref="contentRef" class="intro-text">
           <p>
-            네 번째 사담콘은 SIPE의 개발자 컨퍼런스로, 개발자들이 모여 서로의 경험과 지식을 나누는 자리입니다. 이번 사담콘에서는 다양한 주제의 발표 세션과 네트워킹 이벤트가 준비되어 있습니다.
+            사담콘은 사이퍼들의 이야기(談)를 나누는 컨퍼런스로, 다양한 분야에 종사하는 현직 개발자들이 경험과 인사이트를 공유하는 행사입니다.
           </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
-            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
-            architecto beatae vitae dicta sunt explicabo.
-          </p>
+          
+          <div class="sipe-info-card">
+            <h3>SIPE는 어떤 동아리인가요?</h3>
+            <p>
+              <strong>SIPE</strong>는 <em>Sharing Insights with People Everyday</em>의 약자입니다.
+            </p>
+            <p>
+              현직 개발자들이 함께 교류하며 성장하는 IT 커뮤니티를 지향하고 있습니다.
+            </p>
+            <p>
+              1기에서부터 4기까지 총 <strong>131명의 사이퍼(SIPER)</strong>들이 함께하고 있으며, 온/오프라인에서 활발하게 활동하고 있습니다.
+            </p>
+            <div class="sipe-link">
+              SIPE에 대해 더 궁금하시다면? 
+              <a href="https://sipe.team/" target="_blank" rel="noopener noreferrer">sipe.team</a>
+            </div>
+          </div>
+
           <div class="cta-section">
             <button class="cta-button" @click="handleRegister">
               지금 신청하기
@@ -162,6 +170,79 @@ onMounted(() => {
 
 .intro-text p {
   margin-bottom: 1.5rem;
+}
+
+.sipe-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.sipe-info-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.sipe-info-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea, #a8edea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sipe-info-card p {
+  color: #b8c5d1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.sipe-info-card p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.sipe-info-card strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sipe-info-card em {
+  color: #a8edea;
+  font-style: italic;
+}
+
+.sipe-link {
+  color: #b8c5d1;
+  font-size: 0.95rem;
+}
+
+.sipe-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.sipe-link a:hover {
+  color: #a8edea;
 }
 
 .cta-section {
