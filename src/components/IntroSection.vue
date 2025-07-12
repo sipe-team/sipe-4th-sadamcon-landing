@@ -7,16 +7,10 @@ const titleRef = ref<HTMLElement>()
 const contentRef = ref<HTMLElement>()
 
 onMounted(() => {
-  console.log('IntroSection mounted')
-  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        console.log('Intersection observed:', entry.isIntersecting, entry.intersectionRatio)
-        
         if (entry.isIntersecting) {
-          console.log('Starting intro animations')
-          
           // Animate title
           if (titleRef.value) {
             gsap.fromTo(titleRef.value,
@@ -26,7 +20,6 @@ onMounted(() => {
                 y: 0, 
                 duration: 1, 
                 ease: "power2.out",
-                onComplete: () => console.log('Title animation complete')
               }
             )
           }
@@ -41,7 +34,6 @@ onMounted(() => {
                 duration: 1, 
                 delay: 0.3, 
                 ease: "power2.out",
-                onComplete: () => console.log('Content animation complete')
               }
             )
           }
@@ -58,7 +50,6 @@ onMounted(() => {
 
   if (introRef.value) {
     observer.observe(introRef.value)
-    console.log('Observer attached to intro section')
   } else {
     console.error('IntroRef not found')
   }

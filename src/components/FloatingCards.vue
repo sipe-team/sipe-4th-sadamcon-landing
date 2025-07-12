@@ -66,16 +66,10 @@ const cards: Card[] = [
 ]
 
 onMounted(() => {
-  console.log('FloatingCards mounted')
-  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        console.log('Cards intersection observed:', entry.isIntersecting)
-        
         if (entry.isIntersecting) {
-          console.log('Starting cards animations, cards count:', cardElements.value.length)
-          
           // Animate cards with stagger - optimized for performance
           if (cardElements.value.length > 0) {
             gsap.fromTo(cardElements.value,
@@ -91,7 +85,6 @@ onMounted(() => {
                 duration: 0.8,
                 ease: "power2.out",
                 stagger: 0.1,
-                onComplete: () => console.log('Cards initial animation complete')
               }
             )
           }
@@ -108,7 +101,6 @@ onMounted(() => {
 
   if (cardsRef.value) {
     observer.observe(cardsRef.value)
-    console.log('Observer attached to cards section')
   } else {
     console.error('CardsRef not found')
   }
