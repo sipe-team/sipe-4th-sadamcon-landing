@@ -2,6 +2,7 @@
 import SipeBlocks from './components/SipeBlocks.vue'
 import IntroSection from './components/IntroSection.vue'
 import FloatingCards from './components/FloatingCards.vue'
+import Sponsors from './components/Sponsors.vue'
 </script>
 
 <template>
@@ -15,6 +16,11 @@ import FloatingCards from './components/FloatingCards.vue'
       <!-- Introduction Section -->
       <section class="section intro-section">
         <IntroSection />
+      </section>
+
+      <!-- Sponsors Section -->
+      <section class="section sponsors-section">
+        <Sponsors />
       </section>
 
       <!-- Floating Cards Section -->
@@ -72,6 +78,10 @@ main {
   padding: 4rem 2rem;
 }
 
+.sponsors-section {
+  padding: 4rem 2rem;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -108,6 +118,10 @@ html {
   }
   
   .cards-section {
+    padding: 3rem 1rem;
+  }
+  
+  .sponsors-section {
     padding: 3rem 1rem;
   }
   

@@ -275,14 +275,9 @@ onMounted(() => {
     0 10px 30px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform-style: preserve-3d;
-  will-change: transform;
-  transform: translateZ(0); /* Force GPU acceleration */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
   
   /* Initial state for entrance animation */
   opacity: 0;
@@ -295,13 +290,8 @@ onMounted(() => {
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
 }
 
-/* Hover animations - only transform and properties that don't cause reflow */
+/* Hover animations - only transform */
 .floating-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transform: translate3d(0, -8px, 0) scale3d(1.02, 1.02, 1);
 }
 
@@ -321,9 +311,9 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.2s ease;
   will-change: transform;
-  transform: translateZ(0); /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
 }
 
 .floating-card:hover .card-image img {
@@ -338,7 +328,7 @@ onMounted(() => {
   bottom: 0;
   background: linear-gradient(135deg, var(--card-color, #667eea), transparent);
   opacity: 0.3;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.2s ease;
 }
 
 .floating-card:hover .card-overlay {
@@ -372,22 +362,16 @@ onMounted(() => {
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.2s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   will-change: transform;
-  transform: translateZ(0); /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
 }
 
 .card-button:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
   transform: translate3d(0, -2px, 0);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card-button:active {
@@ -396,9 +380,9 @@ onMounted(() => {
 }
 
 .arrow {
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.2s ease;
   will-change: transform;
-  transform: translateZ(0); /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
 }
 
 .card-button:hover .arrow {
@@ -413,11 +397,11 @@ onMounted(() => {
   height: 200%;
   background: radial-gradient(circle, var(--card-color, #667eea) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.2s ease;
   pointer-events: none;
   z-index: -1;
   will-change: opacity;
-  transform: translateZ(0); /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
 }
 
 .floating-card:hover .card-glow {
@@ -455,7 +439,7 @@ onMounted(() => {
   box-shadow: 
     0 20px 50px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
   animation: modalFlip 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -492,9 +476,9 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.2s ease;
   will-change: transform;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .modal-close:hover {
@@ -586,9 +570,9 @@ onMounted(() => {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.2s ease;
   will-change: transform;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .linkedin-button:hover {
@@ -606,7 +590,7 @@ onMounted(() => {
 /* Modal Transition */
 .modal-enter-active,
 .modal-leave-active {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.2s ease-in;
 }
 
 .modal-enter-from,
