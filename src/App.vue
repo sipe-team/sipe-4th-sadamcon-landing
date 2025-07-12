@@ -37,12 +37,14 @@ import FloatingCards from './components/FloatingCards.vue'
 body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #e2e8f0;
+  background: #0a0a0f;
   overflow-x: hidden;
 }
 
 .app {
   min-height: 100vh;
+  background: linear-gradient(180deg, #0a0a0f 0%, #0f0f23 50%, #1a1a2e 100%);
 }
 
 main {
@@ -54,7 +56,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   /* Initial state for animations - removed opacity: 0 to make sections visible by default */
 }
 
@@ -63,17 +64,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Remove background since SipeBlocks now handles it */
   position: relative;
   overflow: hidden;
 }
 
-.intro-section {
-  background: #f8f9fa;
-}
-
 .cards-section {
-  background: #ffffff;
   padding: 4rem 2rem;
 }
 
@@ -88,15 +83,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #1a1a2e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #667eea;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #764ba2;
 }
 </style>

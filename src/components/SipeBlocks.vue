@@ -58,15 +58,11 @@ onMounted(() => {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, 
-    #74b9ff 0%,   /* Light blue */
-    #0984e3 25%,  /* Blue */
-    #00b894 50%,  /* Mint green */
-    #00cec9 75%,  /* Cyan */
-    #6c5ce7 100%  /* Purple blue */
+  background: radial-gradient(ellipse at center, 
+    rgba(26, 26, 46, 0.9) 0%, 
+    rgba(15, 15, 35, 0.95) 50%, 
+    rgba(10, 10, 15, 1) 100%
   );
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
@@ -84,7 +80,7 @@ onMounted(() => {
   font-weight: 900;
   font-size: clamp(4rem, 10vw, 9rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #ff9595, #ffe5b1);
+  background: linear-gradient(135deg, #667eea, #764ba2, #a8edea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -120,9 +116,9 @@ onMounted(() => {
 .float-circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(102, 126, 234, 0.15);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .float-triangle {
@@ -159,7 +155,7 @@ onMounted(() => {
 .float-4 {
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-bottom: 50px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 50px solid rgba(102, 126, 234, 0.15);
   top: 60%;
   right: 20%;
   animation: float4 5s ease-in-out infinite;
@@ -168,7 +164,7 @@ onMounted(() => {
 .float-5 {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-bottom: 40px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 40px solid rgba(118, 75, 162, 0.12);
   bottom: 30%;
   right: 10%;
   animation: float5 9s ease-in-out infinite;

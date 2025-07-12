@@ -216,9 +216,9 @@ const handleCardClick = (index: number) => {
 .cards-header h2 {
   font-size: 3rem;
   font-weight: 700;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #667eea, #764ba2, #a8edea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -226,7 +226,7 @@ const handleCardClick = (index: number) => {
 
 .cards-header p {
   font-size: 1.2rem;
-  color: #666;
+  color: #b8c5d1;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -240,9 +240,14 @@ const handleCardClick = (index: number) => {
 
 .floating-card {
   position: relative;
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -253,7 +258,11 @@ const handleCardClick = (index: number) => {
 }
 
 .floating-card:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .card-image {
@@ -295,20 +304,22 @@ const handleCardClick = (index: number) => {
 .card-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .card-text {
-  color: #666;
+  color: #b8c5d1;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .card-button {
-  background: linear-gradient(135deg, var(--card-color, #667eea), #764ba2);
-  color: white;
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -320,8 +331,10 @@ const handleCardClick = (index: number) => {
 }
 
 .card-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .arrow {
