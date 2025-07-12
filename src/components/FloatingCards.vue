@@ -76,41 +76,24 @@ onMounted(() => {
         if (entry.isIntersecting) {
           console.log('Starting cards animations, cards count:', cardElements.value.length)
           
-          // Animate cards with stagger
+          // Animate cards with stagger - optimized for performance
           if (cardElements.value.length > 0) {
             gsap.fromTo(cardElements.value,
               { 
                 opacity: 0, 
-                y: 100,
-                scale: 0.8,
-                rotation: -10
+                y: 50,
+                scale: 0.9
               },
               { 
                 opacity: 1, 
                 y: 0,
                 scale: 1,
-                rotation: 0,
-                duration: 1.2,
-                ease: "elastic.out(1, 0.3)",
-                stagger: 0.2,
+                duration: 0.8,
+                ease: "power2.out",
+                stagger: 0.1,
                 onComplete: () => console.log('Cards initial animation complete')
               }
             )
-            
-            // Add floating animation to each card
-            cardElements.value.forEach((card, index) => {
-              if (card) {
-                gsap.to(card, {
-                  y: "random(-10, 10)",
-                  rotation: "random(-2, 2)",
-                  duration: "random(3, 5)",
-                  repeat: -1,
-                  yoyo: true,
-                  ease: "sine.inOut",
-                  delay: index === 0 ? 0.1 : index * 0.5
-                })
-              }
-            })
           }
           
           observer.unobserve(entry.target)
@@ -135,10 +118,11 @@ const handleCardHover = (index: number, isHover: boolean) => {
   const card = cardElements.value[index]
   if (card) {
     gsap.to(card, {
-      scale: isHover ? 1.05 : 1,
-      y: isHover ? -10 : 0,
-      duration: 0.3,
-      ease: "power2.out"
+      scale: isHover ? 1.02 : 1,
+      y: isHover ? -5 : 0,
+      duration: 0.2,
+      ease: "power1.out",
+      overwrite: true
     })
   }
 }
@@ -147,14 +131,16 @@ const handleCardClick = (index: number) => {
   const card = cardElements.value[index]
   if (card) {
     gsap.to(card, {
-      scale: 0.95,
+      scale: 0.98,
       duration: 0.1,
-      ease: "power2.out",
+      ease: "power1.out",
+      overwrite: true,
       onComplete: () => {
         gsap.to(card, {
-          scale: 1.05,
-          duration: 0.3,
-          ease: "back.out(1.7)"
+          scale: 1.02,
+          duration: 0.15,
+          ease: "power1.out",
+          overwrite: true
         })
       }
     })
@@ -250,11 +236,12 @@ const handleCardClick = (index: number) => {
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   transform-style: preserve-3d;
+  will-change: transform;
   /* Ensure cards are visible initially */
   opacity: 1;
-  transform: translateY(0) scale(1) rotate(0deg);
+  transform: translateY(0) scale(1);
 }
 
 .floating-card:hover {
@@ -275,7 +262,8 @@ const handleCardClick = (index: number) => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .floating-card:hover .card-image img {
@@ -290,7 +278,7 @@ const handleCardClick = (index: number) => {
   bottom: 0;
   background: linear-gradient(135deg, var(--card-color, #667eea), transparent);
   opacity: 0.3;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 .floating-card:hover .card-overlay {
@@ -324,10 +312,11 @@ const handleCardClick = (index: number) => {
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  will-change: transform;
 }
 
 .card-button:hover {
@@ -338,7 +327,8 @@ const handleCardClick = (index: number) => {
 }
 
 .arrow {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 
 .card-button:hover .arrow {
@@ -353,7 +343,7 @@ const handleCardClick = (index: number) => {
   height: 200%;
   background: radial-gradient(circle, var(--card-color, #667eea) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
   pointer-events: none;
   z-index: -1;
 }
