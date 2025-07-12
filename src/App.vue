@@ -26,6 +26,8 @@ import FloatingCards from './components/FloatingCards.vue'
 </template>
 
 <style>
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +35,7 @@ import FloatingCards from './components/FloatingCards.vue'
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
