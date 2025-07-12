@@ -18,14 +18,14 @@ const cards: Card[] = [
     id: 1,
     title: "Redis Lettuce 기반 분산 락으로 데이터 정합성 보장하기",
     content: "Redis Lettuce 기반 분산 락을 통해 주문·결제 등에서 발생할 수 있는 중복 처리 문제를 해결하고, 동시성 환경에서도 데이터 정합성을 보장하는 구조와 실제 적용 사례를 소개합니다. 또한 락 해제의 한계와 향후 개선 방향까지 함께 다룹니다.",
-    image: "https://picsum.photos/400/300",
+    image: "https://s.abcnews.com/images/Business/GTY_steve_jobs_2_jtm_150323.jpg",
     color: "#667eea"
   },
   {
     id: 2,
     title: "현업에서의 LLMOps",
     content: "현업에서의 경험을 바탕으로 LLMOps 워크플로우 전반—데이터 준비, 모델 운영, 모니터링 등—에서 실제로 어떤 작업이 이루어지는지 설명합니다. 또한 다양한 LLMOps 도구들을 소개하며 실무에 적용할 수 있는 방안들을 함께 제시합니다.",
-    image: "https://picsum.photos/400/300",
+    image: "https://hips.hearstapps.com/hmg-prod/images/elon-musk-gettyimages-2147789844-web-675b2c17301ea.jpg",
     color: "#764ba2"
   },
   {
@@ -53,14 +53,14 @@ const cards: Card[] = [
     id: 6,
     title: "개발 유튜버 할래말래 애매하긴해",
     content: "개발 유튜브 채널을 운영하며 겪은 수익, 콘텐츠 성과, 성장 전략 등을 공유하고, 잘되는 채널과 그렇지 않은 채널의 차이를 분석합니다. 유튜버를 꿈꾸는 분들을 위해 현실적인 조언과 방향성도 함께 전합니다.",
-    image: "https://picsum.photos/400/300",
+    image: "https://pimg.mk.co.kr/news/cms/202502/04/news-p.v1.20250204.c58974823543481ba7070079cffe568b_R.jpg",
     color: "#d4fc79"
   },
   {
     id: 7,
     title: "풀스택 프리랜서가 AI시대에 프로젝트를 구성하는 방식",
     content: "AI 시대에 풀스택 프리랜서로서 어떻게 도구들을 조합해 프로젝트를 효율적으로 구성해왔는지에 대한 실질적인 경험과 시행착오를 공유합니다. ChatGPT, Cursor, Tailwind, Shadcn, Monorepo 등 각 도구의 도입 배경과 문제 해결 과정을 통해, 개발자의 역할이 어떻게 변화하고 있는지를 짚어봅니다.",
-    image: "https://picsum.photos/400/300",
+    image: "https://i.namu.wiki/i/C9DriGKF1EAL2ScL7E7ojp9ReOUt0PVWrhTdUQgIr2lYcxSIa9qR8ydH0lVysRvTKNTLnqA9jZ5MiLBYnVxuRw.webp",
     color: "#fbc2eb"
   },
 ]
@@ -107,7 +107,7 @@ onMounted(() => {
                   repeat: -1,
                   yoyo: true,
                   ease: "sine.inOut",
-                  delay: index * 0.5
+                  delay: index === 0 ? 0.1 : index * 0.5
                 })
               }
             })
