@@ -3,6 +3,7 @@ import SipeBlocks from './components/SipeBlocks.vue'
 import IntroSection from './components/IntroSection.vue'
 import FloatingCards from './components/FloatingCards.vue'
 import Sponsors from './components/Sponsors.vue'
+import CtaSection from './components/CtaSection.vue'
 </script>
 
 <template>
@@ -26,6 +27,11 @@ import Sponsors from './components/Sponsors.vue'
       <!-- Floating Cards Section -->
       <section class="section cards-section">
         <FloatingCards />
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section cta-section">
+        <CtaSection />
       </section>
     </main>
   </div>
