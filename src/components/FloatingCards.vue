@@ -38,7 +38,7 @@ const cards: Card[] = [
 더 나은 서비스를 제공하기 위해 항상 고민하고 있습니다.
 
 JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니다.`,
-    image: "https://s.abcnews.com/images/Business/GTY_steve_jobs_2_jtm_150323.jpg",
+    image: "/img/profile_junhwan.jpg",
     color: "#667eea",
     linkedinUrl: 'https://www.linkedin.com/in/jun-hwan-jang-aa7567209/',
   },
@@ -64,8 +64,8 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
   },
   {
     id: 4,
-    title: "알잘딱 에이전트 만들기: Context Engineering",
-    content: '에이전트는 단순 챗봇을 넘어 "행위 자동화"를 목표로 하지만, LLM의 한계로 인해 정교한 Context Engineering이 필수입니다. 본 세션에서는 LangChain/LangGraph를 활용한 Context Engineering 기법과 실서비스 적용을 위한 핵심 평가 지표를 소개합니다.',
+    title: "알잘딱 AI 에이전트 만들기 w. 컨텍스트 엔지니어링",
+    content: '에이전트는 단순 챗봇을 넘어 "행위 자동화"를 목표로 하지만, LLM의 한계로 인해 정교한 Context Engineering이 필수입니다. 본 세션에서는 에이전트의 작동 원리와 한계를 짚고, LangChain과 LangGraph를 활용해 실 서비스에 적용 가능한 컨텍스트 엔지니어링 기법을 소개합니다.',
     speakerName: "조혜정",
     speakerIntro: `안녕하세요. AI Research Engineer 조혜정입니다.
 버티컬 도메인 에이전트를 연구/개발하며, 컨텍스트 엔지니어링을 통해 성능을 고도화하는 작업을 담당해 왔습니다.
