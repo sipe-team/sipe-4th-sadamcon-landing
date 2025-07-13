@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://https://4th-sadamcon.sipe.team/sitemap.xml
+
+# Block crawling of unnecessary files
+Disallow: /src/
+Disallow: *.json$
+Disallow: *.ts$
+Disallow: *.vue$

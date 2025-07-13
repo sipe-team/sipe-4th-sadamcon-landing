@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "gsap": "^3.13.0",
     "intersection-observer": "^0.12.2",
     "vue": "^3.5.17"

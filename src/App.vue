@@ -1,9 +1,37 @@
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import SipeBlocks from './components/SipeBlocks.vue'
 import IntroSection from './components/IntroSection.vue'
 import FloatingCards from './components/FloatingCards.vue'
 import Sponsors from './components/Sponsors.vue'
 import CtaSection from './components/CtaSection.vue'
+
+// SEO 최적화를 위한 동적 메타 태그 설정
+useHead({
+  htmlAttrs: {
+    lang: 'ko',
+  },
+  meta: [
+    { name: 'geo.region', content: 'KR' },
+    { name: 'geo.country', content: 'KR' },
+    { name: 'geo.placename', content: '대한민국' },
+    { name: 'ICBM', content: '37.5665,126.9780' }, // 서울 좌표
+    { name: 'application-name', content: 'SIPE 사담콘' },
+    { name: 'msapplication-TileColor', content: '#2563eb' },
+    { name: 'msapplication-config', content: '/browserconfig.xml' },
+    { name: 'mobile-web-app-capable', content: 'yes' },
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+    { name: 'apple-mobile-web-app-title', content: 'SIPE 사담콘' },
+  ],
+  link: [
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+    { rel: 'manifest', href: '/site.webmanifest' },
+    { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#2563eb' },
+  ],
+})
 </script>
 
 <template>
