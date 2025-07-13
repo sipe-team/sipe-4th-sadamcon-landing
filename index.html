@@ -33,6 +33,29 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#2563eb" />
     
+    <!-- Android Chrome font rendering optimization -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Font display optimization -->
+    <style>
+      /* Critical font loading for Android Chrome */
+      @supports (font-variation-settings: normal) {
+        body { font-family: 'Pretendard Variable', 'Pretendard', 'Inter', system-ui, sans-serif; }
+      }
+      @supports not (font-variation-settings: normal) {
+        body { font-family: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', system-ui, sans-serif; }
+      }
+      
+      /* Force font weights on Android */
+      .android-chrome-font-fix {
+        font-synthesis: weight style;
+        font-variant-numeric: normal;
+        font-feature-settings: normal;
+      }
+    </style>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -80,6 +103,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
+    
+    <!-- Font Preconnect for better performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Pretendard Font - Static weights for better Android support -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"></noscript>
+    
+    <!-- Inter Font for English text fallback -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
     
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   </head>

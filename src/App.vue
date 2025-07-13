@@ -62,8 +62,6 @@ useHead({
 </template>
 
 <style>
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
-
 * {
   margin: 0;
   padding: 0;
@@ -71,11 +69,41 @@ useHead({
 }
 
 body {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Pretendard Variable', 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
   line-height: 1.6;
   color: #e2e8f0;
   background: #0a0a0f;
   overflow-x: hidden;
+  font-weight: 400;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Font weight definitions for better Android Chrome support */
+.font-light { font-weight: 300 !important; }
+.font-normal { font-weight: 400 !important; }
+.font-medium { font-weight: 500 !important; }
+.font-semibold { font-weight: 600 !important; }
+.font-bold { font-weight: 700 !important; }
+.font-extrabold { font-weight: 800 !important; }
+.font-black { font-weight: 900 !important; }
+
+/* Ensure font weights work on Android */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: inherit;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+/* Force font loading and rendering */
+* {
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
 }
 
 .app {
