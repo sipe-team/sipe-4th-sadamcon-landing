@@ -380,7 +380,7 @@ onMounted(() => {
   }
   
   .intro-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 10vw, 3rem);
     margin-bottom: 1.5rem;
   }
   

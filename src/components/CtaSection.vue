@@ -236,6 +236,7 @@ onMounted(() => {
   width: 60px;
   height: 60px;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.08);
@@ -433,7 +434,7 @@ onMounted(() => {
   }
   
   .highlight-item {
-    gap: 1.25rem;
+    gap: 1rem;
     margin-bottom: 1.25rem;
   }
   

@@ -202,12 +202,12 @@ onMounted(() => {
   }
   
   .hero-content {
-    padding: 1.5rem;
+    padding: 0;
     max-width: 100%;
   }
   
   .hero-title {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2rem, 11vw, 6rem);
     margin-bottom: 1.5rem;
     gap: 0.08em;
   }
