@@ -310,8 +310,61 @@ onMounted(() => {
 
 /* Mobile only - single column layout */
 @media (max-width: 767px) {
+  .sponsors-section {
+    padding: 2rem 1rem;
+  }
+  
+  .sponsors-header {
+    margin-bottom: 2rem;
+  }
+  
+  .sponsors-header h2 {
+    font-size: 2rem;
+  }
+  
+  .sponsors-header p {
+    font-size: 0.9rem;
+  }
+  
+  .sponsors-card {
+    padding: 1.5rem;
+  }
+  
   .sponsors-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .sponsor-item {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .sponsor-item::before {
+    border-radius: 12px;
+  }
+  
+  .sponsor-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    padding: 0.75rem;
+  }
+  
+  /* Show sponsor name with smaller font on mobile */
+  .sponsor-info {
+    display: block;
+  }
+  
+  .sponsor-name {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  
+  /* Hide sponsor description on mobile */
+  .sponsor-description {
+    display: none;
   }
 }
 </style>
