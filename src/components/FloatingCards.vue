@@ -25,8 +25,7 @@ const cards: Card[] = [
     speakerName: "심미진",
     speakerIntro: `안녕하세요, 프론트엔드 주니어 개발자 심미진입니다. IT 커뮤니티 활동하는 것을 좋아하고, 경험하고 얻은 것들을 다함께 공유함으로써 IT 생태계에 조금이라도 기여하고자 합니다.`,
     image: "/img/profile_mijin.png",
-    color: "#667eea",
-    linkedinUrl: 'https://www.linkedin.com/in/jun-hwan-jang-aa7567209/',
+    color: "#FFE3EE",
   },
   {
     id: 1,
@@ -39,7 +38,7 @@ const cards: Card[] = [
 
 JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니다.`,
     image: "/img/profile_junhwan.jpg",
-    color: "#667eea",
+    color: "#78A9ED",
     linkedinUrl: 'https://www.linkedin.com/in/jun-hwan-jang-aa7567209/',
   },
   {
@@ -83,7 +82,7 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
 디자인 → 개발 → PM이라는 커리어 전환을 경험하며 다양한 시각에서 제품을 바라보고 있습니다.
 이번 발표를 통해 PM을 꿈꾸거나 직무 전환을 고민하는 분들께 현실적인 인사이트와 작은 용기를 전할 수 있기를 바랍니다.`,
     image: "/img/profile_jiwon.jpg",
-    color: "#e5e6b4"
+    color: "#65CBFF"
   },
   {
     id: 6,
