@@ -26,6 +26,7 @@ const cards: Card[] = [
     speakerIntro: `안녕하세요, 프론트엔드 주니어 개발자 심미진입니다. IT 커뮤니티 활동하는 것을 좋아하고, 경험하고 얻은 것들을 다함께 공유함으로써 IT 생태계에 조금이라도 기여하고자 합니다.`,
     image: "/img/profile_mijin.png",
     color: "#FFE3EE",
+    linkedinUrl: 'http://www.linkedin.com/in/mijin-sim4530/'
   },
   {
     id: 1,
