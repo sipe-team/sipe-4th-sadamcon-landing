@@ -84,7 +84,8 @@ onMounted(() => {
         </h2>
         <div ref="ctaContentRef" class="cta-text">
           <p class="cta-description">
-            SIPE 네 번째 사담콘에서 현직 개발자들의 생생한 경험과 인사이트를 만나보세요.
+            SIPE 네 번째 사담콘에서 현직 개발자들의 생생한 경험과<br />
+            인사이트를 만나보세요.
           </p>
           <p class="cta-subtitle">
             여러분의 성장을 위한 소중한 시간이 될 거에요!
