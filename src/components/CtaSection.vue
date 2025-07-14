@@ -95,7 +95,7 @@ onMounted(() => {
               <div class="highlight-icon">📅</div>
               <div class="highlight-text">
                 <h4>일정</h4>
-                <p>2025년 8월 2일 토요일 13:00 - 17:30</p>
+                <p>2025년 8월 2일 토요일 13:30 - 18:00</p>
               </div>
             </div>
             <div class="highlight-item">
