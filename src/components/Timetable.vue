@@ -30,7 +30,7 @@ const sessions: Session[] = [
   {
     time: '13:40 ~ 14:10',
     duration: '30분',
-    title: 'Redis Lettuce 기반 분산 락으로 데이터 정합성 보장하기',
+    title: '대규모 동시성 이벤트에서의 데이터 정합성 : Redis 분산 락 실전 적용기',
     speaker: '장준환',
     type: 'session'
   },
