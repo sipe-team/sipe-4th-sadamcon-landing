@@ -5,6 +5,7 @@ import IntroSection from './components/IntroSection.vue'
 import FloatingCards from './components/FloatingCards.vue'
 import Timetable from './components/Timetable.vue'
 import Sponsors from './components/Sponsors.vue'
+import GoodsSection from './components/GoodsSection.vue'
 import CtaSection from './components/CtaSection.vue'
 
 // SEO 최적화를 위한 동적 메타 태그 설정
@@ -57,6 +58,11 @@ useHead({
       <!-- Timetable Section -->
       <section class="section timetable-section">
         <Timetable />
+      </section>
+
+      <!-- Goods Section -->
+      <section class="section goods-section">
+        <GoodsSection />
       </section>
 
       <!-- CTA Section -->
@@ -146,6 +152,10 @@ main {
   padding: 4rem 2rem;
 }
 
+.goods-section {
+  padding: 4rem 2rem;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -186,6 +196,10 @@ html {
   }
   
   .sponsors-section {
+    padding: 3rem 1rem;
+  }
+  
+  .goods-section {
     padding: 3rem 1rem;
   }
   
