@@ -37,6 +37,11 @@ const sponsors: Sponsor[] = [
     name: "제이펍",
     logo: "/img/sponsor_jpub.png",
   },
+  {
+    id: 6,
+    name: "나만의 네컷",
+    logo: "/img/sponsor_my4cut.png",
+  },
 ]
 
 onMounted(() => {
