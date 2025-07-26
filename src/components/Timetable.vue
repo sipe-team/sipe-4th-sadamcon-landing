@@ -35,30 +35,30 @@ const sessions: Session[] = [
     type: 'session'
   },
   {
-    time: '14:10 ~ 14:30',
-    duration: '20분',
-    title: 'Real-World LLMOps',
-    speaker: '김민준',
+    time: '14:10 ~ 14:40',
+    duration: '30분',
+    title: '알잘딱 AI 에이전트 만들기 w. 컨텍스트 엔지니어링',
+    speaker: '조혜정',
     type: 'session'
   },
   {
-    time: '14:30 ~ 14:50',
+    time: '14:40 ~ 15:00',
     duration: '20분',
     title: '쉬는 시간',
     type: 'break'
   },
   {
-    time: '14:50 ~ 15:10',
+    time: '15:00 ~ 15:20',
     duration: '20분',
     title: '지구 반대편을 대응하는 어플리케이션을 위해',
     speaker: '김민규',
     type: 'session'
   },
   {
-    time: '15:10 ~ 15:40',
-    duration: '30분',
-    title: '알잘딱 AI 에이전트 만들기 w. 컨텍스트 엔지니어링',
-    speaker: '조혜정',
+    time: '15:20 ~ 15:40',
+    duration: '20분',
+    title: 'Real-World LLMOps',
+    speaker: '김민준',
     type: 'session'
   },
   {

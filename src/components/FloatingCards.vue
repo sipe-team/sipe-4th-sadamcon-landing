@@ -44,13 +44,15 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
   },
   {
     id: 2,
-    title: "Real-World LLMOps",
-    content: "MAU 20만 이상의 AI 서비스 운영 경험을 통해 본 LLMOps의 이상과 현실을 공유합니다. 기술적 구현보다는 실무에서 마주한 예상치 못한 문제들과 해결 과정을 전달하며, 빠르게 발전하는 AI 기술 앞에서 느끼는 고민까지 다룹니다.",
-    speakerName: "김민준",
-    speakerIntro: `한국 대기업 문화를 가진 IT 기업부터, 실리콘밸리 문화의 금융 에이전트 스타트업까지 다양한 경험을 쌓은 소프트웨어 엔지니어 김민준입니다.`,
-    image: "/img/profile_minjun.jpg",
-    color: "#764ba2",
-    linkedinUrl: 'https://www.linkedin.com/in/neilkim404/',
+    title: "알잘딱 AI 에이전트 만들기 w. 컨텍스트 엔지니어링",
+    content: '에이전트는 단순 챗봇을 넘어 "행위 자동화"를 목표로 하지만, LLM의 한계로 인해 정교한 Context Engineering이 필수입니다. 본 세션에서는 에이전트의 작동 원리와 한계를 짚고, LangChain과 LangGraph를 활용해 실 서비스에 적용 가능한 컨텍스트 엔지니어링 기법을 소개합니다.',
+    speakerName: "조혜정",
+    speakerIntro: `안녕하세요. AI Research Engineer 조혜정입니다.
+버티컬 도메인 에이전트를 연구/개발하며, 컨텍스트 엔지니어링을 통해 성능을 고도화하는 작업을 담당해 왔습니다.
+이번 사담콘 에서는 그 과정에서 얻은 인사이트와 실무 노하우를 공유하고자 합니다 :)`,
+    image: "/img/profile_hyejeong.jpeg",
+    color: "#f5576c",
+    linkedinUrl: 'https://www.linkedin.com/in/hyejeong-jo-1069b2235/'
   },
   {
     id: 3,
@@ -64,15 +66,13 @@ JVM 생태계와 데이터 엔지니어링에 큰 매력을 느끼고 있습니�
   },
   {
     id: 4,
-    title: "알잘딱 AI 에이전트 만들기 w. 컨텍스트 엔지니어링",
-    content: '에이전트는 단순 챗봇을 넘어 "행위 자동화"를 목표로 하지만, LLM의 한계로 인해 정교한 Context Engineering이 필수입니다. 본 세션에서는 에이전트의 작동 원리와 한계를 짚고, LangChain과 LangGraph를 활용해 실 서비스에 적용 가능한 컨텍스트 엔지니어링 기법을 소개합니다.',
-    speakerName: "조혜정",
-    speakerIntro: `안녕하세요. AI Research Engineer 조혜정입니다.
-버티컬 도메인 에이전트를 연구/개발하며, 컨텍스트 엔지니어링을 통해 성능을 고도화하는 작업을 담당해 왔습니다.
-이번 사담콘 에서는 그 과정에서 얻은 인사이트와 실무 노하우를 공유하고자 합니다 :)`,
-    image: "/img/profile_hyejeong.jpeg",
-    color: "#f5576c",
-    linkedinUrl: 'https://www.linkedin.com/in/hyejeong-jo-1069b2235/'
+    title: "Real-World LLMOps",
+    content: "MAU 20만 이상의 AI 서비스 운영 경험을 통해 본 LLMOps의 이상과 현실을 공유합니다. 기술적 구현보다는 실무에서 마주한 예상치 못한 문제들과 해결 과정을 전달하며, 빠르게 발전하는 AI 기술 앞에서 느끼는 고민까지 다룹니다.",
+    speakerName: "김민준",
+    speakerIntro: `한국 대기업 문화를 가진 IT 기업부터, 실리콘밸리 문화의 금융 에이전트 스타트업까지 다양한 경험을 쌓은 소프트웨어 엔지니어 김민준입니다.`,
+    image: "/img/profile_minjun.jpg",
+    color: "#764ba2",
+    linkedinUrl: 'https://www.linkedin.com/in/neilkim404/',
   },
   {
     id: 5,
